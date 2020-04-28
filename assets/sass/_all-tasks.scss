@@ -1,0 +1,316 @@
+#all-task {
+  height: 100%;
+  overflow: auto;
+  .header {
+    color: white;
+    background: url(https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?cs=srgb&dl=forest-mountains-fog-clouds-9754.jpg&fm=jpg)
+      center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    // height: 300px;
+    background-size: cover;
+    .top {
+      background: rgba(58, 71, 147, 0.6);
+      padding: 50px 15px;
+      text-align: right;
+      position: relative;
+      height: 150px;
+      .logo {
+        font-family: "Megrim", cursive;
+        font-size: 36px;
+        float: left;
+      }
+      .tasks-total {
+        position: relative;
+        top: -20px;
+        .task {
+          display: inline-block;
+          .number {
+            color: $lightPurple;
+            font-weight: 100;
+            font-size: 60px;
+            margin: 0 10px 0 0;
+            position: relative;
+            top: 15px;
+          }
+        }
+      }
+      .add-circle {
+        background: #ededed;
+        border-radius: 50%;
+        position: absolute;
+        top: 125px;
+        right: 25px;
+        padding: 10px;
+        .fas {
+          color: $lightBlue;
+          font-size: 50px;
+        }
+      }
+    }
+  }
+  .content-area {
+    color: black;
+    width: 100%;
+    // height: 90%;
+    overflow: auto;
+    .container {
+      input[type="text"] {
+        height: 30px;
+        width: 65%;
+        margin-top: 15px;
+        background: rgba(255, 255, 255, 0.362);
+        border: none;
+        // border-bottom: rgba(28, 28, 104, 0.427);
+      }
+    }
+    .tasks-container {
+      margin: 40px 0;
+      .task-box {
+        background: $white;
+        padding: 20px;
+        border-bottom: 2px solid #d1d1d1;
+        margin: 0 0 20px 0;
+        position: relative;
+        .title {
+          color: black;
+          font-size: 24px;
+          font-weight: 300;
+          margin-top: 10px;
+        }
+        .date {
+          color: #ababab;
+          margin: 2px 0 2px 0;
+          font-size: 12px;
+          font-weight: 100;
+        }
+        .check-box {
+          padding: 4px;
+          border-radius: 10px;
+          border: 3px solid rgba(28, 28, 104, 0.427);
+          display: inline-block;
+          position: absolute;
+          top: 25px;
+          right: 25px;
+          font-size: 32px;
+          color: $darkBlue;
+        }
+      }
+    }
+    button {
+      height: 40px;
+      width: 100%;
+      background: $lightPurple;
+      color: white;
+      font-size: 16px;
+    }
+  }
+  .task-form {
+    background: $darkBlue;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    color: $white;
+    padding: 50px 0;
+    transform: translate(0, 100%);
+    transition: all 0.6s ease-in-out;
+    &.active {
+      transform: translate(0, 0);
+    }
+    .close-btn {
+      position: absolute;
+      right: 35px;
+      top: 35px;
+      padding: 15px;
+      cursor: pointer;
+      .fas {
+        font-size: 36px;
+      }
+    }
+    form {
+      display: block;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 15px;
+    }
+    h3 {
+      margin: 50px 0;
+      font-size: 36px;
+      text-align: center;
+      font-weight: 100;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      text-transform: capitalize;
+      font-family: "roboto", sans-serif;
+      font-weight: 300;
+      font-size: 24px;
+      margin: 0 0 15px 0;
+    }
+    form input[type="text"],
+    textarea {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border: none;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+      font-family: "roboto", sans-serif;
+      font-weight: 300;
+      font-size: 36px;
+      color: $white;
+      &:focus {
+        outline: none;
+        // border: none;
+      }
+    }
+    textarea {
+      height: 250px;
+    }
+    button {
+      background: $lightBlue;
+      border: none;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 100;
+      text-transform: uppercase;
+      color: $white;
+      padding: 15px 20px;
+    }
+  }
+}
+.container {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+  margin: 25px 0;
+  font-size: 16px;
+  font-weight: 100;
+  &.lightBlue {
+    font-size: 16px;
+    padding: 15px 0;
+    background: $lightBlue;
+    text-decoration: none;
+    color: white;
+  }
+}
+// laptops
+@media screen and (min-width: 1200px) {
+  #all-task {
+    // background-color: blue;
+  }
+}
+// tablets
+@media screen and (max-width: 1199px) {
+  #all-task {
+    // background-color: red;
+  }
+}
+// phones
+@media screen and (max-width: 767px) {
+  #all-task {
+    .header {
+      .top {
+        .tasks-total {
+          top: 20px;
+          .task {
+            display: block;
+            .number {
+              color: $lightPurple;
+              font-weight: 100;
+              font-size: 36px;
+              margin: 0 10px 0 0;
+              position: relative;
+              top: 5px;
+            }
+          }
+        }
+        .add-circle {
+          background: #ededed;
+          border-radius: 50%;
+          position: absolute;
+          top: 135px;
+          right: 25px;
+          padding: 10px;
+          .fas {
+            color: $lightBlue;
+            font-size: 50px;
+          }
+        }
+      }
+    }
+    .task-form {
+      textarea {
+        height: 100px;
+      }
+      .close-btn {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        padding: 15px;
+      }
+    }
+  }
+}
+// extra small phones
+@media screen and (max-width: 353px) {
+  #all-task {
+    .header {
+      .top {
+        .logo {
+          float: none;
+          text-align: center;
+          margin: 0 0 15px 0;
+        }
+        .tasks-total {
+          text-align: center;
+          top: 20px;
+          right: 0;
+          .task {
+            display: inline-block;
+            margin-right: 10px;
+            .number {
+              color: $lightPurple;
+              font-weight: 100;
+              font-size: 28px;
+              margin: 0 10px 0 0;
+              position: relative;
+              top: 5px;
+            }
+          }
+        }
+        .add-circle {
+          background: #ededed;
+          border-radius: 50%;
+          position: absolute;
+          top: 135px;
+          right: 25px;
+          padding: 10px;
+          .fas {
+            color: $lightBlue;
+            font-size: 50px;
+          }
+        }
+      }
+    }
+    .task-form {
+      .close-btn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        padding: 15px;
+      }
+    }
+  }
+}

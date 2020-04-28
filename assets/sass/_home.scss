@@ -1,0 +1,85 @@
+#home {
+  background: url(https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?cs=srgb&dl=forest-mountains-fog-clouds-9754.jpg&fm=jpg)
+    center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .welcome-box {
+    height: 100%;
+    width: 100%;
+    background: rgba(58, 71, 147, 0.6);
+    padding: 40px 15px;
+    text-align: center;
+    h2 {
+      font-family: "Roboto", sans-serif;
+      margin-top: 300px;
+      margin-bottom: 20px;
+      color: $white;
+      font-weight: 100;
+      text-transform: uppercase;
+      font-size: 24px;
+    }
+    h1 {
+      font-family: "Megrim", cursive;
+      // margin-top: 50%;
+      color: $white;
+      font-weight: 100;
+      text-transform: uppercase;
+      font-size: 90px;
+    }
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 100;
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #home {
+    background: url(https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?cs=srgb&dl=forest-mountains-fog-clouds-9754.jpg&fm=jpg)
+      center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .welcome-box {
+      height: 100%;
+      width: 100%;
+      background: rgba(58, 71, 147, 0.6);
+      padding: 40px 15px;
+      text-align: center;
+      h2 {
+        font-family: "Roboto", sans-serif;
+        margin-top: 300px;
+        margin-bottom: 20px;
+        color: $white;
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 24px;
+      }
+      h1 {
+        font-family: "Megrim", cursive;
+        // margin-top: 50%;
+        color: $white;
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 50px;
+      }
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 100;
+        font-size: 16px;
+      }
+    }
+  }
+}
